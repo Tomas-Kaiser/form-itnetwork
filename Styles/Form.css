@@ -1,8 +1,60 @@
-div.sjs-hello-world {
-   font-size: 200%;
-   margin: 1em;
+body {
+   margin: 0;
+}
+
+div.sjs-form {
+   font-size: 150%;
 }
 
 .hidden {
-   
+   display: none;
+}
+
+p {
+   font-size: 22px;
+}
+
+.main-menu {
+   list-style-type: none;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin: 0;
+
+   border: 1px solid black;
+   background-color: #3b94e0;
+}
+
+.main-li {
+   padding: 5px 25px;
+   margin: 20px 5px;
+   cursor: pointer;
+   text-align: center;
+   border: 1px solid white;
+   color: rgb(219, 215, 215);
+
+}
+
+.main-li:hover {
+   color: white;
+}
+
+.sub-menu-ul {
+   position: absolute;
+   color: black;
+   list-style-type: none;
+
+   margin-right: auto;
+   margin-left: auto;
+   top: 25%;
+   right: 0;
+   left: 0;
+}
+
+.sub-menu-ul li {
+   padding: 10px;
+}
+
+.sub-menu-ul li p {
+   margin-top: 10px;
 }
