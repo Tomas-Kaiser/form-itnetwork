@@ -1,0 +1,65 @@
+ul.sjs-bar-chart {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+ul.sjs.sjs-bar-chart > li:before {
+    content: ''; /* Removes article-component list styles */
+}
+
+ul.sjs-bar-chart li { /* ul is specified to overwrite the article-component styles */
+    text-indent: 0;
+    position: relative;
+	display: flex;
+	margin-left: 3px;
+	min-height: 1px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+
+
+ul.sjs-bar-chart li span {
+	width: 100%;
+	max-width: 50px;
+}
+
+
+ul.sjs-bar-chart li span:hover {
+    opacity: .7;
+}
+
+ul.sjs-bar-chart li span.sjs-bar-chart-title {
+    position: absolute;
+    bottom: -50px;
+    transform: rotate(-45deg);
+    font-size: 0.8em;
+    color: #a7a7a7;
+}
+
+.sjs-bar-chart li {
+	display: flex;
+	align-items: flex-end;
+}
+
+.sjs-bar-chart {
+    display: flex;
+    align-items: flex-end;
+	padding-left: 15px;
+}
+
+.sjs-bar-chart-wrapper {
+	display: flex;
+}
+
+.sjs-bar-chart-wrapper > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 0.8em;
+	color: #a7a7a7;
+	padding-bottom: 75px;
+	padding-top: 5px;
+	text-align: right;
+}

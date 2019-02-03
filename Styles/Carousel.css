@@ -1,0 +1,181 @@
+/* Carousel */
+div.sjs-carousel {
+	position: relative;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	border: 0;
+}
+
+div.sjs-carousel > ul {
+	height: auto !important;
+}
+
+div.sjs-carousel.carousel-padding > ul:not(.carousel-circles) li {
+	padding: 0px 50px;
+}
+
+div.sjs-carousel.carousel-padding > ul:first-of-type {
+	margin: 7px 0 41px 0;
+	list-style-type: none;
+}
+
+div.sjs-carousel li img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* Circles */
+div.sjs-carousel ul.carousel-circles {
+	position: absolute;
+	bottom: 7px;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+div.sjs-carousel ul.carousel-circles li {
+	display: inline-block;
+	visibility: visible;
+	opacity: 0.6;
+	width: 12px;
+	height: 12px;
+	border-radius: 999px;
+	background: black;
+	margin-right: 8px;
+	box-shadow: 0 0 2px white;
+	cursor: pointer;
+}
+
+div.sjs-carousel ul.carousel-circles li.active {
+	background: white;
+	opacity: 1;
+	box-shadow: 0 0 2px black;
+}
+
+div.sjs-carousel ul.carousel-circles li:last-child {
+	margin-right: 0;
+}
+
+/* Overlay buttons */
+div.sjs-carousel div.carousel-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	flex-flow: row;
+}
+
+div.sjs-carousel div.carousel-overlay div {
+	font-size: 54px;
+	box-sizing: border-box;
+	padding: 0 12px;
+	display: flex;
+	align-items: center;
+	color: white;
+	opacity: 0.5;
+	width: 50%;
+	cursor: pointer;
+	text-shadow: 0 0 5px black;
+}
+
+div.sjs-carousel div.carousel-overlay div:hover {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+div.sjs-carousel div.carousel-overlay div:nth-child(2) {
+	justify-content: flex-end;
+}
+
+/*  small carousel */
+
+div.sjs-carousel.carousel-small .carousel-overlay div {
+	font-size: 2.3em;
+	padding: 0 6px;
+}
+
+div.sjs-carousel.carousel-small.carousel-padding > ul:not(.carousel-circles) li {
+	padding: 0px 24px;
+}
+
+div.sjs-carousel.carousel-small.carousel-padding > ul:first-of-type {
+	margin: 10px 0 24px 0;
+}
+
+div.sjs-carousel.carousel-small ul.carousel-circles li {
+	width: 8px;
+	height: 8px;
+}
+
+div.sjs-carousel.carousel-small ul.carousel-circles {
+	bottom: 8px;
+}
+
+/* border */
+
+div.sjs-carousel.carousel-border {
+	border: 1px solid #e8e8e8;
+}
+
+div.sjs-carousel.carousel-small.carousel-borderless .carousel-overlay div {
+	padding: 0 2px;
+}
+
+/* overlay-bottom */
+
+div.sjs-carousel.overlay-bottom .carousel-overlay div {
+	padding: 0px 1px;
+}
+
+div.sjs-carousel.overlay-bottom > ul:first-of-type {
+	margin: 5px 1px 38px 1px;
+}
+
+div.sjs-carousel.overlay-bottom .carousel-overlay {
+	bottom: 8px;
+	height: 20px;
+}
+
+div.sjs-carousel.overlay-bottom ul.carousel-circles {
+	margin: 0 20px;
+	box-sizing: border-box;
+	width: calc(100% - 40px);
+}
+
+div.sjs-carousel.overlay-bottom {
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-o-user-select: auto;
+	user-select: auto;
+}
+
+
+/* clickable */
+div.sjs-carousel.carousel-clickable {
+	-webkit-user-select: initial;
+	-khtml-user-select: initial;
+	-moz-user-select: initial;
+	-o-user-select: initial;
+	user-select: initial;
+}
+
+div.sjs-carousel.carousel-clickable .carousel-overlay {
+	pointer-events: none;
+}
+
+div.sjs-carousel.carousel-clickable .carousel-overlay div {
+	width: 50px; /* TODO: Is too much for the small style */
+	pointer-events: initial;
+}
+
+
+div.sjs-carousel.carousel-clickable .carousel-overlay div:nth-child(2) {
+	margin-left: calc(100% - 100px);
+}

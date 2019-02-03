@@ -1,0 +1,63 @@
+.sjs-tree-view ul {
+	padding-left: 20px;
+}
+
+.sjs-tree-view ul li.file {
+	padding-left: 20px;
+}
+
+.sjs-tree-view .fa-caret-down {
+	margin-right: 20px;
+}
+
+.sjs-tree-view li.closed ul {
+	display: none;
+}
+
+.sjs-tree-view li.closed .fa-caret-down:before {
+	content: "\f0da";
+}
+
+.sjs-tree-view li:before {
+	content: '' !important;
+}
+
+.sjs-tree-view li.directory > i.fa-folder {
+	color: #ffca00;
+}
+
+.sjs-tree-view li.file > i.fa-file-text {
+	color: #6a6a6a;
+}
+
+.sjs-tree-view li.file > i.fa-file {
+	color: #6a6a6a;
+}
+
+.sjs-tree-view li.file > i.fa-dollar {
+	color: #607ccf;
+}
+
+.sjs-tree-view li.file > i.fa-file-code-o.fa-py {
+	color: #607ccf;
+}
+
+.sjs-tree-view li.file > i.fa-coffee {
+	color: #cf2a05;
+}
+
+.sjs-tree-view li.file > i.fa-html5 {
+	color: #cf4e0a;
+}
+
+.sjs-tree-view li.file > i.fa-css3 {
+	 color: #3b6ccf;
+ }
+
+.sjs-tree-view li.file > i.fa-hashtag {
+	color: #5bae47;
+}
+
+.sjs-tree-view li > i {
+	text-align: center;
+}

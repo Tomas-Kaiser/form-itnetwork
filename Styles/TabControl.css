@@ -1,0 +1,34 @@
+/* Tab control */
+div.sjs-tab-control {
+	border: 1px solid #e8e8e8;
+	overflow: hidden;
+}
+
+div.sjs-tab-control > ul {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.sjs-tab-control > ul:first-of-type li {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left: -99999px;
+	text-indent: 0;
+	width: 100%;
+	box-sizing: border-box;
+	height: 100%;
+	overflow-y: auto;
+}
+
+div.sjs-tab-control > ul li:before {
+	content: "" !important;
+}
+
+div.sjs-tab-control > ul:first-of-type li.active {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 1s ease-out;
+	position: static;
+}

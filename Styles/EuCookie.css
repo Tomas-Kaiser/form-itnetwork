@@ -1,0 +1,15 @@
+div.sjs-eu-cookie {
+	position: relative;
+	z-index: 1;
+	background: #f2f4f7;
+	padding: 10px;
+	text-align: center;
+}
+
+div.sjs-eu-cookie span, div.sjs-eu-cookie a {
+	margin-right: 10px;
+}
+
+div.sjs-eu-cookie button {
+	cursor: pointer;
+}

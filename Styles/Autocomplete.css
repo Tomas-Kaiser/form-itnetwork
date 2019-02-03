@@ -1,0 +1,36 @@
+.autocomplete-items-wrapper {
+	position: relative;
+}
+
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	max-height: 175px;
+	background: var(--color-gray-primary);
+	border: 1px solid var(--color-gray-secondary);
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items li {
+	cursor: pointer;
+	text-indent: 0;
+	padding: 3px 5px;
+}
+
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items li:hover {
+	background: white;
+}
+
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items li:before {
+	content: ''; /* Removes article-component list styles */
+}
+
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items li.autocomplete-item-nothing,
+input.sjs-autocomplete + .autocomplete-items-wrapper ul.autocomplete-items li.autocomplete-item-nothing:hover {
+	cursor: default;
+	background: var(--color-gray-primary);
+}
