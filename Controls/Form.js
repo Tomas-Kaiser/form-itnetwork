@@ -36,39 +36,49 @@ class Form extends SimplexControl {
       for (const menu of this.form) {
          menuItems.append(`<li id='${menu.mainMenu.toLowerCase()}' class="main-li">${menu.mainMenu}<p>Paragraph</p></li>`).getNewElements();
       }
-
-
    }
 
    _addListItems() {
       for (const item of this.form) {
          // Select list item from mainMenu
          let selectMainMenuLi = this.element.select(`#${item.mainMenu.toLocaleLowerCase()}`);
-         selectMainMenuLi.append('<ul class="hidden sub-menu-ul"></ul>').getNewElements();
+         selectMainMenuLi.append('<ul class="sub-menu-ul hidden"></ul>').getNewElements();
 
          // Select li of parent ul
          let selectSubMenuUl = selectMainMenuLi.children.last;
 
          // iterate array subMenu
          for (let subItem of item.subMenu) {
-            selectSubMenuUl.append(`<li>${subItem}<p>Paragraph</p></li>`);
+            selectSubMenuUl.append(`<li>${subItem}<p>Paragraph</p><button>click</button></li>`);
          }
 
-         // Add even listener for mainMenu
+         // Add even listener for mainMenu & active for Main list item
          selectMainMenuLi.onClick(() => {
-            if (selectSubMenuUl.hasClass('hidden')) {
-               selectSubMenuUl.removeClass('hidden');
-            } else {
-               selectSubMenuUl.addClass('hidden');
-            }
-            console.log("li clicked")
+            this.removeActive(); // when click another main li removes old content
+
+            selectSubMenuUl.toggleClass('hidden');
+            selectSubMenuUl.addClass('active');
+
+            selectMainMenuLi.addClass('menu-li-active'); // list item active color white
          });
 
          // Stop proapgation for nested li
          selectSubMenuUl.onClick((sender, e) => {
-            console.log("Sub Li was clicked ")
             e.stopPropagation();
          });
+      }
+   }
+
+   removeActive() {
+      let selectActive = this.element.select('.active');
+      let selectActiveLi = this.element.select('.menu-li-active');
+
+      if (selectActive.hasClass('active') && selectActiveLi.hasClass('menu-li-active')) {
+         selectActive.removeClass('active');
+         selectActive.addClass('hidden');
+
+         selectActiveLi.removeClass('menu-li-active');
+
       }
    }
 }
